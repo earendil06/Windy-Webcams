@@ -1,0 +1,45 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Windy Webcams has already been setup with chosen configuration"
+        },
+        "error": {},
+        "step": {
+            "options": {
+                "data": {
+                    "api_key": "API Key",
+                    "webcam_ids": "Webcam Ids"
+                },
+                "data_description": {
+                    "api_key": "API Key generated from Windy Developer Dashboard",
+                    "webcam_ids": "List of Webcam Ids to get image from (comma separated)"
+                },
+                "description": "Set settings for Windy Webcams"
+            },
+            "user": {
+                "data": {}
+            }
+        }
+    },
+    "entity": {},
+    "issues": {},
+    "options": {
+        "error": {},
+        "step": {
+            "init": {
+                "data": {
+                    "api_key": "API Key",
+                    "webcam_ids": "Webcam Ids"
+                },
+                "data_description": {
+                    "api_key": "API Key generated from Windy Developer Dashboard",
+                    "webcam_ids": "List of Webcam Ids to get image from (comma separated)"
+                },
+                "description": "Set settings for Windy Webcams"
+            }
+        }
+    },
+    "selector": {},
+    "services": {},
+    "title": "Windy Webcams"
+}
