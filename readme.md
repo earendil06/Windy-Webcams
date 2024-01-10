@@ -48,3 +48,9 @@ Each Webcam ID will create a dedicated image entity.
 
 
 ![](./docs/images/id.png)
+
+## Congratulations
+
+It looks soooo nice! :D
+
+![](./docs/images/result.png)
