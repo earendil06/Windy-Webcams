@@ -1,4 +1,5 @@
 """API for Windy."""
+from datetime import datetime
 from io import BytesIO
 
 from requests import get
@@ -20,6 +21,10 @@ def get_webcam_json_data(webcam_id, api_key):
 
 def get_image_url(json_data):
     return json_data["images"]["current"]["preview"]
+
+def get_image_last_updated(json_data):
+    str_value = json_data["lastUpdatedOn"]
+    return datetime.fromisoformat(str_value)
 
 
 def get_image_bytes(url):

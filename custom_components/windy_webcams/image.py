@@ -6,7 +6,12 @@ from homeassistant.const import CONF_API_KEY
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
-from .api import get_image_bytes, get_image_url, get_webcam_json_data
+from .api import (
+    get_image_bytes,
+    get_image_last_updated,
+    get_image_url,
+    get_webcam_json_data,
+)
 from .const import CONF_IDS
 
 
@@ -26,9 +31,17 @@ class WebcamImageEntity(ImageEntity):
         data = get_image_bytes(url)
         return data
 
+    def _get_updated(self) -> bytes:
+        json = get_webcam_json_data(self.webcam_id, self.api)
+        return get_image_last_updated(json)
+
     async def async_image(self) -> bytes | None:
         """Return bytes of image."""
         data = await self.hass.async_add_executor_job(self._get_image)
+        updated = await self.hass.async_add_executor_job(self._get_updated)
+        self.image_last_updated = updated
+        self.async_write_ha_state()
+        print("update")
         return data
 
 
