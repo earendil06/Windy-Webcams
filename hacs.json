@@ -1,4 +1,5 @@
 {
     "name": "Windy Webcams",
-    "country": ["EN", "FR"]
+    "country": ["EN", "FR"],
+    "render_readme": true
   }
