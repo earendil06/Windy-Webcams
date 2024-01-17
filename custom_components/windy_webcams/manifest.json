@@ -1,8 +1,6 @@
 {
   "domain": "windy_webcams",
   "name": "Windy Webcams",
-  "version": "1.1.0",
-  "issue_tracker": "https://github.com/earendil06/Windy-Webcams/issues",
   "codeowners": [
     "@earendil06"
   ],
@@ -11,7 +9,9 @@
   "documentation": "https://www.home-assistant.io/integrations/windy_webcams",
   "homekit": {},
   "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/earendil06/Windy-Webcams/issues",
   "requirements": [],
   "ssdp": [],
+  "version": "1.1.0",
   "zeroconf": []
 }
