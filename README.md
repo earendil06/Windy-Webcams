@@ -1,5 +1,8 @@
 # Windy webcams
 
+[![Validate](https://github.com/earendil06/Windy-Webcams/actions/workflows/validate.yml/badge.svg)](https://github.com/earendil06/Windy-Webcams/actions/workflows/validate.yml)
+[![Validate with hassfest](https://github.com/earendil06/Windy-Webcams/actions/workflows/hassfest.yml/badge.svg)](https://github.com/earendil06/Windy-Webcams/actions/workflows/hassfest.yml)
+
 Windy webcams integration for Home assistant provides the possibility to track Webcams pictures provided by Windy.
 
 ## Image entities
