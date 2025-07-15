@@ -29,4 +29,4 @@ def get_image_last_updated(json_data):
 
 def get_image_bytes(url):
     response = get(url)
-    return BytesIO(response.content)
+    return BytesIO(response.content).getvalue()
