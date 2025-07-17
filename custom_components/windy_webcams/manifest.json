@@ -6,7 +6,7 @@
   ],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://www.home-assistant.io/integrations/windy_webcams",
+  "documentation": "https://github.com/earendil06/Windy-Webcams",
   "homekit": {},
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/earendil06/Windy-Webcams/issues",
