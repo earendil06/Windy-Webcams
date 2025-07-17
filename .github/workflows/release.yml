@@ -26,7 +26,7 @@ jobs:
           latest: true
           prerelease: true
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check version
         run: |
@@ -50,7 +50,7 @@ jobs:
         if: ${{ steps.read_property.outputs.value != steps.get_latest_release.outputs.name }}
         uses: meeDamian/github-release@v2.0.3
         with:
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ steps.read_property.outputs.value }}
           name: ${{ steps.read_property.outputs.value }}
           body: ${{ github.event.head_commit.message }}
