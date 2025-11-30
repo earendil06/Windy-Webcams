@@ -5,6 +5,9 @@
 
 Windy webcams integration for Home assistant provides the possibility to track Webcams pictures provided by Windy.
 
+[![Buy Me A Coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20Me%20A%20Coffee&emoji=☕&slug=earendil06&button_colour=FFDD00&font_colour=000000&font_family=Cookie&explicite=true)](https://www.buymeacoffee.com/earendil06)
+
+
 ## Image entities
 
 This integration will create for each provided Webcam ID, an image entity that displays the Webcam image.
