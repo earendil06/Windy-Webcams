@@ -11,6 +11,7 @@ from .api import (
     extract_image_full_url,
     extract_image_last_updated,
     extract_image_preview_url,
+    extract_webcam_title,
     get_image_bytes,
     get_webcam_json_data,
 )
@@ -52,6 +53,14 @@ class WebcamImageEntity(ImageEntity):
         self.image_last_updated = extract_image_last_updated(json)
         self.async_write_ha_state()
         return data
+
+    async def async_added_to_hass(self):
+        """Run when the entity is added to Home Assistant."""
+        json = await self.hass.async_add_executor_job(self._get_webcam_data_json)
+        webcam_name = extract_webcam_title(json)
+
+        if (webcam_name):
+            self._attr_name = webcam_name
 
 
 async def async_setup_entry(

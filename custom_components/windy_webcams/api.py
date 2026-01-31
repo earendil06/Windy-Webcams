@@ -37,6 +37,11 @@ def extract_image_last_updated(json_data):
         return datetime.fromisoformat(str_value)
     return None
 
+def extract_webcam_title(json_data):
+    if 'title' not in json_data:
+        return None
+    return json_data["title"]
+
 
 def get_image_bytes(url):
     response = get(url)
